@@ -19,10 +19,6 @@ print(Full_name)
 #Indexing of an element in a string
 "abcde".index("a")
 
-#Examples of List:
-Friends = ['Hem', 'Thir', 'Bishnu']
-First_friend=Friends[0]
-print(First_friend)
 name = "Hem Dutt"
 print(name.upper())
 print(name.lower())
