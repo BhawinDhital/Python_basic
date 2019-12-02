@@ -1,0 +1,111 @@
+Numbers are being used to represent scores in games, data in visualization and so on.
+Python treats numbers in different ways.
+1. Integers:
+You can add "+", subtract"-", multiply "*", and divide "/" integers in python.
+for example:
+You can add 2 and 3 where there are integers.
+you an apply: 2+3 or 2*3 or 2+3*4 and so on.
+
+2. Floats:
+Any number with a decimal point is a float. For eg. 0.1
+Version of python affects the results while working with integers. For example, Python 2 has a
+little different result.
+When you apply 3 / 2, the output is 1.
+To avoid this error, you have to type 3.0 / 2, the output is then 1.5.
+Or you can type 3 / 2.0 or 3.0 / 2.0 (see examples in p2.py files)
+
+3. Lists and Tuples
+A list in general stores a series of items in a particular order. List are mutable objects which means you can modify a list objects
+after it has been created. However tuples are immutable objects. That means you can not modify a tuple objects after it has been
+created.
+In list, you can access items using an index, or within a loop.
+for example, we make a list:
+Friends = ['Hem', 'Thir', 'Bishnu']
+First_friend=Friends[0]
+print(First_friend)
+
+In the above example, Friends is a list having three names as items in the list. It's index start from zero.
+That's why Friends[0] assigned to 'Hem'.
+Another example of list is:
+Market = ['Aldi','Lidl','Costco']
+To get the first item in the list, use/type
+First_item = Market[0]
+print(First_item)
+
+This gives the output 'Aldi'.
+
+For the last item you can use
+Last_item = Market[-1]
+print(Last_item)
+
+This gives 'Costco'.
+
+Again, you can add 'title' as
+Market = ['Aldi','Lidl','Costco']
+print(Market[0].title())
+This also gives output 'Aldi'.
+Further, you can combine string and list as:
+Result = " My favorite market is" + " " + Market[0] + "."
+print(Result)
+This gives My favorite market is Aldi.
+
+#Looping through a List
+for shop in Market:
+    print(shop)
+This gives the result:
+Aldi
+Lidl
+Costco
+
+#Changing element in a List
+Ok! what if you decided to change items in the List.
+for example, you want to change first item Aldi by Food_Lion.
+Then you can do this the following way.
+#Market = ['Aldi','Lidl','Costco']
+#print(Market)
+#Market[0]= 'Food_Lion'
+#print(Market)
+This replaces the first item by 'Food_Lion'.
+
+#Adding elements to the given List.
+Just use the append meaning add.
+Market = ['Aldi','Lidl','Costco']
+Market.append('Fod_Lion')
+print(Market)
+This gives: ['Aldi', 'Lidl', 'Costco', 'Fod_Lion'].
+You can assign the index to the inserting item as below.
+#Market = ['Aldi','Lidl','Costco']
+#Market.insert(0,'Fod_Lion')
+#print(Market)
+This insert 'Food_Lion' at the First position, index 0.
+
+#Removing an item from the List.
+For this you have to use del(delete) command as:
+#Market = ['Aldi','Lidl','Costco']
+#del Market[0]
+#print(Market)
+This deletes the first item and gives the result as:
+['Lidl', 'Costco']
+
+#Removing a n item using pop method.
+#Market = ['Aldi','Lidl','Costco']
+#popped_Market = Market.pop()
+#print(Market)
+#print(popped_Market)
+The results are:
+['Aldi', 'Lidl']
+Costco
+It means popped command removes the last item in the List.
+However, you can popped any item from the given list.
+for this you have to give/define the corresponding index in the list.
+For example:
+Market = ['Aldi','Lidl','Costco']
+Shop = Market.pop(1)
+print(Shop)
+The output for print(Shop) is Lidl.
+There is another command to remove the item in the list.
+You can use 'remove' command as below.
+#Market = ['Aldi','Lidl','Costco']
+#Market.remove('Lidl')
+#print(Market)
+This removes 'Lidl' from the list.
