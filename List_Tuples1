@@ -1,0 +1,234 @@
+#More about List and Tuples
+Here we discuss more about List and its organization. There are many ways we
+can organize the list.
+1. Sorting a list permanently with sort() method.
+Doing this arrange all items in the list on alphabetical order.
+For example, we create a list as below:
+#cars = ['honda','toyota','nissan','bmw']
+#cars.sort()
+#print(cars)
+Here, we create a list named cars. It includes different car's brand. When you apply sort()
+then the result comes with the items in the list with alphabetical order.
+output = ['bmw', 'honda', 'nissan', 'toyota']
+Now, we can not revert to the original order.
+you can also arrange the items in the list in the reverse order by using the command
+sort(reverse=True). This gives output in the reverse order.
+output = ['toyota', 'nissan', 'honda', 'bmw']
+
+Similarly printing a list in the reverse order follows the way as below.
+Let you have a List,
+cars = ['honda','toyota','nissan','bmw']
+you can print the items in the list in the reverse order as below:
+#cars = ['honda','toyota','nissan','bmw']
+#print(cars)
+#cars.reverse()
+#print(cars)
+This gives the following output:
+['honda', 'toyota', 'nissan', 'bmw']
+['bmw', 'nissan', 'toyota', 'honda']
+It simply reverse the items in the list instead arranging alphabetically.
+
+#Finding a length of the list.
+It is very easy to find the length of the list.
+#cars = ['honda','toyota','nissan','bmw']
+#len(cars)
+#print(len(cars))
+This gives the output = 4
+
+# Looping through a list.
+one example of looping through a list is below:
+
+#friends = ['hem','bishnu','thir']
+#for friend in friends:
+      print(friend)
+This gives the output:
+hem
+bishnu
+thir
+
+Looping is very important task in the computer program.
+you can further add something for each item in the list.
+
+#friends = ['hem','bishnu','thir']
+#for friend in friends:
+  print(friend.title() + ", is a good friend")
+The output is :
+Hem, is a good friend
+Bishnu, is a good friend
+Thir, is a good friend
+
+Further, we can add more lines in printout command in our list as below:
+friends = ['hem','bishnu','thir']
+for friend in friends:
+    print(friend.title() + ", you are great!")
+    print("I respect you very much," +friend.title() + ".\n")
+
+This gives you an output saying that "hem you are great" in the first line and then in the next line
+" I respect you very much hem" and so on for the other items in the list. Great!
+you can use as many lines as you like in your for loops. This method simply provides a good way to summarize
+an operation that was performed on an entire data set.
+
+#Avoiding Indentation errors:
+Python uses indentation to determine when one line of code is connected to the line above it.
+Python uses WHITESPACE to force you to write nearly formatted code with a clear visual
+structure.
+1. Remember to indent the line after the for statement in the loop.
+If there is an error  then python let you know that there is an error.
+It may be possible that sometimes your codes runs without any error but without any results.
+This is a logical error.
+Do not forget the colon at the end of for sentence.
+
+#Making numerical list.
+Here is another process to make a numerical list. one example is shown bwlow.
+squares = []
+#for x in range(1,11):
+#  squares.append(x**2)
+#  print(squares)
+
+This gives the output:
+[1]
+[1, 4]
+[1, 4, 9]
+[1, 4, 9, 16]
+[1, 4, 9, 16, 25]
+[1, 4, 9, 16, 25, 36]
+[1, 4, 9, 16, 25, 36, 49]
+[1, 4, 9, 16, 25, 36, 49, 64]
+[1, 4, 9, 16, 25, 36, 49, 64, 81]
+[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+
+Another example is:
+#for value in range(1,5):
+#print(value)
+The output is:
+1
+2
+3
+4
+It does not print 5. This is called off-by-one behavior you will see often in programming languages.
+So you can use 'range' parameter this way. Further, you can use this 'range' parameter
+to make a list of number in the following ways.
+#numbers =list(range(1,6))
+#print(numbers)
+And this creates a list looking like this.
+[1, 2, 3, 4, 5]
+This is great!
+Similarly we can order python to create a list of many things as below.
+#even_numbers = list(range(2,11,2))
+#print(even_numbers)
+This means starts from 2 and keep going to add 2 till 11.
+This gives the output:
+[2, 4, 6, 8, 10]
+Now, it is clear that you can create any set of numbers using 'range'.
+In python '**' represents 'exponent' function. Here is another example.
+squares = []
+for value in range(1,11):
+    square = value**2
+    squares.append(square)
+print(squares)
+This gives the output:
+[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+Here, we start from an empty list called squares and we call python to loop through each value from 1 to 10
+using the range() function. Then inside the loop, the current value is raised to the second power and stored
+in the variable square and each new value of square is appended to the list squares. Great!
+Another way to write the same thing is mentioned below.
+#squares = []
+#for value in range(1,11):
+    squares.append(value**2)
+#print(squares)
+Another way of list comprehensions:
+#squares = [x**2 for x in range(1,11)]
+#print(squares)
+This gives the same output as:
+[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+
+#Slicing a list
+you can slice the items in your list to make another sub-list.
+friends = ['hem','bishnu','thir','jiwan']
+first_two = friends[:2]
+print(first_two)
+This gives output:
+['hem', 'bishnu']
+
+Now, we can copy a list by the following way.
+copy_of_friends = friends[:]
+print(copy_of_friends)
+This printout the list named friends as:
+['hem', 'bishnu', 'thir', 'jiwan']
+Further we can play with the statistics of numbers in the list.
+consider the following list.
+digits = [1,2,3,4,5,6,7]
+you can printout the maximum and the minimum values of the list digits by
+typing the following command.
+min(digits) printout 1 and maximum digits printout 7.
+#digits = [1,2,3,4,5,6,7]
+#min(digits)
+#print(min(digits))
+#max(digits)
+#print(max(digits))
+#sum(digits)
+#print(sum(digits))
+
+Furthermore in slicing a list. You can play with parts of the List instead of list as a whole.
+for example,
+friends = ['hem','bishnu','shankar','tika',jiwan'] is a list.
+I can choose a part of the list in the following way.
+ print(friends[0:3]) gives the following output,
+
+['hem', 'bishnu', 'shankar'] which means only the first 3 items were separated from the original list.
+
+In this way you can generate any subset of the list.
+you can use other way to create a subset of the given list.
+for example, print(friends[2:]) or print(friends[-3:])
+
+Further, you can loop through a slice of a list.
+for example,
+friends = ['hem','bishnu','shankar','tika',jiwan'] is a list.
+
+
+#Tuples
+List can be modified throughout the program. What if you want to create a list of items that can not be
+changed. You know the word immutable and tuples are immutable.
+
+Tuples looks similar to list except that tuples use parenthesis instead of square bracket.
+For example, if we have a rectangle that should always be a certain size, we can ensure its size does not
+change by putting the dimensions into a tuple.
+Let us take an example:
+dimensions = (200,50)
+print(dimensions[0])
+print(dimensions[1])
+The output is:
+200
+50
+Here, output is individual element in the tuple.
+
+#Looping through all values in tuple
+This process is similar to list.
+for example:
+dimensions = (200,50)
+for dimension in dimensions:
+    print(dimension)
+
+This gives the same output as before:
+200
+50
+
+#Writing over a tuple:
+
+Although it is not possible to modify the items in the tuple, still you can write or you can assign
+a new value to a variable that holds a tuple.
+#dimensions = (200,50)
+#print("original dimensions:")
+#for dimension in dimensions:
+#    print(dimension)
+#dimensions = (400,100)
+#print("\nModified dimensions:")
+#for dimension in dimensions:
+#    print(dimension)
+This gives the output:
+400
+100
+This is valid because overwriting a variable is valid.
+Hence you can use tuples when you want to store a set of values that should not be changed throughout the life of a program.
+
+!Good Luck and have fun.
