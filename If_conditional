@@ -1,0 +1,262 @@
+In this session, we go with If statement. This is a very nice approach for choices.
+This is a way to examine a set of conditions and deciding which action to take based on
+those conditions.If statements are used to test for particular conditions and respond appropriately.
+We start from a simple example:
+Lets have a list
+friends = ['hem','bishnu','jiwan','thir']
+We can apply if conditions for the very simple way
+friends = ['hem','bishnu','jiwan','thir']
+for friend in friends:
+    if friend =='bishnu':
+        print(friend.upper())
+    else:
+        print(friend.title())
+
+This gives the output:
+Hem
+BISHNU
+Jiwan
+Thir
+There are some commands you can use in if statement in python.
+For example,
+equals x == 10
+not equal x != 10
+greater than x > 10
+or equal to x > = 10
+less than x , 10
+or equal to x < = 10
+
+In very simple true and false statement, you can have a conditional test.
+friends = ['hem','bishnu','jiwan','thir']
+for friend in friends:
+    if friend =='bishnu':
+        print("true")
+    else:
+        print("false")
+This gives the output:
+false
+true
+false
+false
+
+This is the way python works for conditional test.
+Python is case sensitive. For example,
+friend = 'hem'
+friend = 'Hem'
+print(friend)
+
+This gives false because in the first statement there is a lower case in the item 'hem' but
+in the second case, item equals to 'Hem' which is upper case.
+In another example,
+car = 'Audi'
+car.lower() == 'audi'
+print(car)
+
+In this case, first car stores the value 'Audi' and then in the second statement it converts into lower case value 'audi'.
+In this case, two string values match.
+car = 'Audi'
+if car !='honda':
+    print("ride an Audi!")
+It printout the output:
+'ride an Audi'. Which is true.
+#Numerical comparison:
+In python you can make numerical comparisons which is pretty forward.
+for example:
+answer = 40
+if answer !=42:
+    print("try again!")
+
+In this case, the program executes and the output is:
+'try again'
+If
+answer = 42
+if answer !=42:
+    print("try again!")
+In this case there is no execution of the program. In this way you can test the numerical comparison in python.
+
+There are many things you can do in python. You can check a lot of things.
+For example, you can check whether a value is in a list or not?
+for example, a list is as below:
+banned_cars = ['honda','volvo','solvo','olvo']
+car = 'honda'
+if car not in banned_cars:
+    print(car.title() +",  you can ride if you wish.")
+
+This code does not execute giving results. If you put car = 'toyota'
+then it executes printing the command.
+
+#Boolean expression:
+In python you can use boolean expression which may be simply true or false.
+Another simple example,
+car = 'toyota'
+print("Is car == 'toyota'? I predict True.")
+print(car=='toyota')
+print("\nIs car == 'audi'? I predict False.")
+print(car=='audi')
+
+This gives the following output.
+Is car == 'toyota'? I predict True.
+True
+
+Is car == 'audi'? I predict False.
+False
+
+#if statement
+you can write if statements if you are able to understand conditional tests.There are several
+conditional statement exists.
+i. Simple if statements
+if conditional_test:
+  do something
+
+You can put anything in this type of very simple format.It has one test and one action.
+for example:
+age = 20
+if age >=18:
+    print("you are old enough to vote!")
+
+The output is printed as ' you are old enough to vote!'. If age is 17 then the code does not printout.
+This is very simple kind of if statement.
+You can further add whatever you want to make the story more interesting.
+If you add print option as print("Have you registered to vote yet?") after the first print option then you get,
+'Have you registered to vote yet?'
+This way you can make a lot of changes in your printout function.
+
+#if-else statement
+
+you can use this command for the different action.
+for example;
+age = 17
+if age >=18:
+    print("you are old enough to vote!")
+    print("Have you registered to vote yet?")
+else:
+    print("sorry, you are too young to vote.")
+    print("you can register as soon as you are 18.")
+
+The output is:
+sorry, you are too young to vote.
+you can register as soon as you are 18.
+
+So, you can use if-else statement to define two different situations. Great!
+Similar way;
+age = 70
+if age < 4:
+    ticket_prize = 0
+elif age < 18:
+    ticket_prize = 10
+elif age < 30 :
+    ticket_prize = 20
+else:
+    ticket_prize = 50
+print("ticket_prize:",ticket_prize)
+
+In this case, the output is: 'ticket_prize = 50'
+
+So you can use multiple times elif in conditional test.
+
+Another similar example;
+age = 2
+if age < 4:
+    price = 0
+elif age < 18:
+    price = 5
+elif age < 65:
+    price = 10
+elif age >65:
+    price = 5
+print("your cost is $" + str(price) +".")
+The output is:your cost is $0. Great!
+In the same way we can  test multiple conditions:
+requested_toppings = ['mushrooms','cheese']
+if 'mushrooms' in requested_toppings:
+    print("Adding mushrooms.")
+if 'pepperoni' in requested_toppings:
+    print("Adding pepperoni.")
+if 'cheese' in requested_toppings:
+    print("Adding cheese.")
+print("Finishing making your pizza!")
+The output is :
+Adding mushrooms.
+Adding cheese.
+Finishing making your pizza!
+
+It shows that we can have controls over the statements imposing different conditions.
+So, what's the difference using if-else and if-if?
+requested_toppings = ['mushrooms','cheese']
+if 'mushrooms' in requested_toppings:
+    print("Adding mushrooms.")
+elif 'pepperoni' in requested_toppings:
+    print("Adding pepperoni.")
+elif 'cheese' in requested_toppings:
+    print("Adding cheese.")
+print("Finishing making your pizza!")
+In this case, output is:
+Adding mushrooms.
+Finishing making your pizza!
+This means the test for 'mushrooms' is the first test to pass, so mushrooms are added to the pizza.
+However, the values 'cheese' and 'pepperoni' are never checked, because python does not run any tests beyond
+the first test that passes in an if-else chain. The customer's first topping will be added, but all of their
+other toppings will be missed.
+#Using if statements with lists
+Now, you can apply if statement to the lists. Start from the simple example.
+requested_toppings = ['mushrooms','green peppers','cheese']
+for requested_topping in requested_toppings:
+    print("Adding" + requested_topping+ ".")
+print("\nFinished making your pizza Hem Ji")
+
+This printout:
+Addingmushrooms.
+Addinggreen peppers.
+Addingcheese.
+
+Finished making your pizza Hem Ji.
+This was a great pizzeria example.
+What if one of the ingredient is finished? No problem! We can use the following commands.
+requested_toppings = ['mushrooms','green peppers','cheese']
+for requested_topping in requested_toppings:
+    if requested_topping == 'green peppers':
+        print("sorry! we are out of green peppers right now.")
+    else:
+        print("Adding" + requested_topping + ".")
+print("\nFinished making your pizza!")
+The output is :
+Adding mushrooms.
+sorry! we are out of green peppers right now.
+Addingcheese.
+
+Finished making your pizza!
+
+Great method.
+You can use this method to test whether a List is Not empty?!
+Let's check whether the given list is empty before building the pizza.
+requested_toppings = []
+if requested_toppings:
+    for requested_topping in requested_toppings:
+        print("Adding" + requested_topping + ".")
+    print("\nFinished making your pizza!")
+else:
+    print("you have only one option of plain pizza.")
+The output is:
+you have only one option of plain pizza.
+If the list was not empty then the output will show each of the requested topping
+being added to the pizza.
+
+# Using multiple lists.
+
+We now decided to work with multiple lists.
+available_cars = ['toyota','honda','nissan','hundai']
+requested_cars = ['toyota','volvo','subaru']
+for requested_car in requested_cars:
+    if requested_car in available_cars:
+        print("Ride" + " " + requested_car +".")
+    else:
+        print("Sorry!, we do not have" + " " + requested_car + ".")
+print("\nStart riding your car!")
+The output is :
+Ride toyota.
+Sorry!, we do not have volvo.
+Sorry!, we do not have subaru.
+
+Start riding your car!
+
+So we are now able to handle the real life scenario.
